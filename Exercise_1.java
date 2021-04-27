@@ -12,7 +12,7 @@ class BinarySearch {
                 low=mid+1;
             }
         }
-        return -1
+        return -1;
     } 
   
     // Driver method to test above 
