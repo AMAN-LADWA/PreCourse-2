@@ -20,6 +20,18 @@ class LinkedList
     { 
         //Write your code here
 	//Implement using Fast and slow pointers
+	struct Node *slow_ptr = head; 
+    	struct Node *fast_ptr = head; 
+  
+    	if (head!=NULL) 
+    	{ 
+        	while (fast_ptr != NULL && fast_ptr->next != NULL) 
+        	{ 
+           	 fast_ptr = fast_ptr->next->next; 
+            	slow_ptr = slow_ptr->next; 
+        	} 
+       	 printf("The middle element is [%d]\n\n", slow_ptr->data); 
+    	} 
     } 
   
     public void push(int new_data) 
